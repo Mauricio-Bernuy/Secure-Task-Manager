@@ -1,0 +1,8 @@
+FROM postgres:latest
+WORKDIR /data/db
+COPY package.json ./
+RUN npm install -g --unsafe-perm=true --allow-root
+COPY . /app
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
+

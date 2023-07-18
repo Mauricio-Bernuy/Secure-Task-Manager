@@ -1,0 +1,39 @@
+version: '3.7'
+volumes:
+  docker:
+
+services:
+  database:
+    image: postgres
+    # command: sh -c " cd data/db && ls"  
+    environment:
+      POSTGRES_NAME: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_HOST: database_postgres_image
+    ports:
+      - '5431:5432'
+    volumes:
+      - docker:/data/db
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  nextapp:
+    build:
+      context: ./seguridad-1
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_NAME: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_HOST: database_postgres_image
+      DB_LOCAL_URL: postgres://database:5432/next-docker
+    container_name: nextapp
+    restart: always
+    volumes:
+      - ./seguridad-1:/app
+      - /app/node_modules
+      # - /app/.next
+    ports:
+      - 3000:3000
+    depends_on:
+      - database

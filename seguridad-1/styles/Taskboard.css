@@ -1,0 +1,84 @@
+/* *  {
+  font-family: Inter;
+}
+
+body {
+  margin: 0px;
+  background-color: lightblue;
+} */
+
+.nav-cont {
+  background-color: #F55A5A;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  align-items: center;
+  height: 80px;
+}
+
+.nav-title {
+  color: white;
+  font-size: 28px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-cont {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 80%;
+}
+
+.separator {
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cont-cont {
+  border-radius: 5px;
+  border: solid gray 2px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vmin;
+  height: 80vmin;
+  background-color: lightgray;
+  overflow-y: auto;
+}
+
+.cont-upper-cont {
+  display: flex;
+  align-items: center;
+}
+
+.cont-title {
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: auto;
+}
+
+.cont-complete-btn {
+  font-size: 16px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.task-cont {
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.task-title {
+  font-size: 24px;
+  margin: 0px;
+  padding-bottom: 20px;
+}
