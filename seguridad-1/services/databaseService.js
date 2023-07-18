@@ -1,4 +1,9 @@
-import {AttendanceEvents} from './helpers/attendanceEvents.js';
+// import {AttendanceEvents} from './helpers/attendanceEvents.js';
+
+const AttendanceEvents = {
+	CHECKIN: "CHECK_IN",
+	CHECKOUT: "CHECK_OUT",
+};
 
 const knex = require("knex")({
 	client: "pg",
