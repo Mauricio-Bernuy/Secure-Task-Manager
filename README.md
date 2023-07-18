@@ -5,6 +5,7 @@
 docker compose build
 docker compose up 
 ```
+### Remember to fill required credentials in the .env file.
 
 ## after installing new components
 ```
